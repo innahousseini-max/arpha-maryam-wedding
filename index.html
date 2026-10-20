@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arpha & Maryam – Invitation de mariage</title>
+<meta name="description" content="Vous êtes conviés au mariage d'Arpha & Maryam – 11 décembre 2026">
+<meta name="theme-color" content="#faf6ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="g1" cx="50%" cy="40%"><stop offset="0" stop-color="#f6dcdc"/><stop offset="1" stop-color="#d9a4aa"/></radialGradient>
+<radialGradient id="g2" cx="50%" cy="40%"><stop offset="0" stop-color="#fdf0ee"/><stop offset="1" stop-color="#e9c9cb"/></radialGradient>
+</defs></svg>
+
+<div id="intro">
+  <div class="env" id="env" role="button" tabindex="0" aria-label="Ouvrir l'enveloppe">
+    <div class="back"></div>
+    <div class="card"><img class="clogo" src="assets/logo.png" alt="A &amp; M"><b class="script sv">Arpha &amp; Maryam</b><span>11 . 12 . 2026</span></div>
+    <div class="pocket"></div>
+    <div class="flap"></div>
+    <div class="seal"><img src="assets/logo.png" alt=""></div>
+    <i class="er e1"></i><i class="er e2"></i>
+  </div>
+  <p class="hint" id="hint">Touchez l'enveloppe pour l'ouvrir</p>
+</div>
+
+<button id="disc" aria-label="Lecture / pause de la musique"><span class="vinyl"><i id="ico">▶</i></span><small id="dtxt">Cliquez pour jouer</small></button>
+<audio id="aud" loop preload="none"></audio>
+<div id="fx" aria-hidden="true"></div>
+
+<header id="hero" class="sec"><i data-flora="tl"></i><i data-flora="br"></i>
+  <img class="logo rv" src="assets/logo.png" alt="Logo A &amp; M">
+  <p class="cap rv">Le mariage de</p>
+  <h1 class="rv"><span class="script sv">Arpha</span><em>&amp;</em><span class="script sv">Maryam</span></h1>
+  <p class="date rv">11 . 12 . 2026</p>
+  <p class="script tag rv">Le début de l'éternité commence ici</p>
+</header>
+
+<section class="sec"><div class="panel rv"><i data-flora="tl"></i><i data-flora="br"></i>
+  <div class="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <p>Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux</p>
+  <h2 class="script">Les grandes familles</h2>
+  <p class="cap2">Alhadji Mamoudou</p><p class="amp">&amp;</p><p class="cap2">Alhadji Housseini (Sabana)</p>
+  <div class="gems"><i></i><i></i><i></i></div>
+  <p>ont l'immense honneur de vous convier au<br><em class="rose">mariage de leurs enfants</em></p>
+  <p class="cap2 big">Arpha</p><p class="amp">&amp;</p><p class="cap2 big">Maryam</p>
+</div></section>
+
+<section class="sec"><i data-flora="tr"></i>
+  <h2 class="script rv">Le compte à rebours</h2>
+  <p class="rv" style="margin:0 0 14px">Mariage religieux – vendredi 11 décembre 2026</p>
+  <div class="cd rv" id="cd"></div>
+</section>
+
+<section class="sec"><div class="panel lace rv"><i data-flora="bl"></i>
+  <h2 class="script">Lieu de la cérémonie religieuse</h2>
+  <p class="cap2">Présidentielle</p>
+  <p>Domicile Alhadji Housseini Bobboy</p>
+  <a class="btn" id="maps" target="_blank" rel="noopener">Google Maps</a>
+</div></section>
+
+<section class="sec"><div class="panel rv"><i data-flora="tr"></i><i data-flora="bl"></i><h2 class="script">Programme</h2><div id="prog"></div></div></section>
+
+<section class="sec"><h2 class="script rv">Notre histoire d'amour</h2><div class="gems rv"><i></i><i></i><i></i></div><div id="story" class="rv"></div></section>
+
+<section class="sec"><h2 class="script rv">Galerie</h2><div class="gal rv" id="gal"></div></section>
+<div id="lb" role="dialog" aria-label="Photo"><img alt=""></div>
+
+<section class="sec"><h2 class="rv rsvp-t">RSVP</h2><p class="rv">Votre présence à notre mariage nous ferait un immense honneur.</p>
+  <form class="panel rv" id="rsvp"><i data-flora="tl"></i>
+    <label for="nm">Nom complet *</label><input id="nm" required maxlength="80" placeholder="M. et Mme Dupont">
+    <label>Serez-vous présent(e) ?</label>
+    <div class="row"><button type="button" class="btn on" data-v="1">Oui, présent(e)</button><button type="button" class="btn" data-v="0">Non, absent(e)</button></div>
+    <label for="msg">Message pour les mariés</label><textarea id="msg" rows="4" maxlength="600" placeholder="Félicitations pour votre mariage…"></textarea>
+    <button class="btn send" type="submit">Envoyer la réponse</button>
+    <p id="ok" role="status"></p>
+  </form>
+</section>
+
+<section class="sec"><h2 class="script rv">Livre d'or &amp; vœux</h2><p class="cap rv">Les messages de nos invités</p>
+  <div id="wishes" class="rv"></div><p class="cap">— Que l'amour soit toujours votre guide —</p></section>
+
+<section class="sec"><div class="thanks rv"><i data-flora="tl"></i>
+  <div class="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <p>Ya Allah, bénis ce mariage et accorde Ta baraka et Ta miséricorde à ce couple. Accorde-leur bonheur, compréhension mutuelle et un amour durable, et bénis-les avec de vertueux enfants.</p>
+  <p><b>Ameen ya Rabbal Alamin</b></p>
+  <p class="script" style="font-size:30px;margin:12px 0 0">Merci du fond du cœur pour votre présence et vos prières.</p>
+</div></section>
+
+<section class="sec"><h2 class="script rv">Restons connectés</h2>
+  <p class="rv">Rejoignez notre groupe WhatsApp pour recevoir toutes les informations du mariage et partager les photos du grand jour.</p>
+  <div class="heart rv"><h3 class="script">Groupe du mariage</h3><a class="btn wa" id="wa" target="_blank" rel="noopener">Rejoindre</a></div>
+</section>
+<footer>© 2026 Arpha &amp; Maryam · Made with ♥</footer>
+<script src="script.js"></script>
+</body>
+</html>
