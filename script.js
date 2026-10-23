@@ -11,15 +11,15 @@ const CFG = {
     "Ce qui commença par de simples moments devint lentement quelque chose de plus profond. L'amour arriva si naturellement que nous en remarquâmes à peine la première lueur.",
     "Et ceci n'est que le début de toutes les vies que nous vivrons encore ensemble."],
   program: [
-    ["Mardi 8 décembre", [["Bangourdé (présentation du trousseau de la mariée)", "16H00", "Présidentielle - Domicile Alhadji Housseini Bobboy"]]],
-    ["Jeudi 10 décembre", [["Dambordou (cérémonie du henné)", "19H30", "Présidentielle - Domicile Alhadji Housseini Bobboy"]]],
-    ["Vendredi 11 décembre", [
-      ["DOA et Tégal (mariage religieux)", "07H00", "Présidentielle - Domicile Alhadji Housseini Bobboy"],
-      ["Yiwordou (lavage du henné de la mariée)", "15H30", "Présidentielle - Domicile Alhadji Housseini Bobboy"],
+    ["Mardi 8 Décembre", [["Bangourdé (présentation du trousseau de la mariée)", "16H00", "Présidentiel - Domicile Alhadji Housseini"]]],
+    ["Jeudi 10 Décembre", [["Dambordou (cérémonie du henné)", "19H30", "Présidentiel - Domicile Alhadji Housseini"]]],
+    ["Vendredi 11 Décembre", [
+      ["DOA et Tégal (mariage religieux)", "07H00", "Présidentiel - Domicile Alhadji Housseini"],
+      ["Yiwordou (lavage du henné de la mariée)", "15H30", "Présidentiel - Domicile Alhadji Housseini"],
       ["Sodditordou (présentation de la mariée à sa belle famille)", "16H30", "Marouaré - Domicile Alhadji Mamoudou"],
-      ["Accompagnement de la mariée au domicile conjugal", "17H30", "Lieu à confirmer"]]],
-    ["Samedi 12 décembre", [["Mariage civil & Réception", "10H00", "Parc Boisé"]]],
-    ["Dimanche 13 décembre", [["Retour définitif", "10H30", "Domicile conjugal"]]]
+      ["Accompagnement de la mariée au domicile conjugal", "17H30", "Domicile conjugual"]]],
+    ["Samedi 12 Décembre", [["Mariage Civil & Réception", "10H00", "Parc Boisé"]]],
+    ["Dimanche 13 Décembre", [["Retour définitif", "10H30", "Domicile conjugal"]]]
   ]
 };
 /* ========================================= */
@@ -30,42 +30,24 @@ const el = (t, c, x) => { const e = document.createElement(t); if (c) e.classNam
 $$("[data-flora]").forEach(e => { e.innerHTML = '<img src="assets/fleur.webp" alt="" loading="lazy">'; });
 
 /* Éclats de diamant */
-if (!matchMedia("(prefers-reduced-motion:reduce)").matches) for (let i = 0; i < 18; i++) {
+if (!matchMedia("(prefers-reduced-motion:reduce)").matches) for (let i = 0; i < 25; i++) {
   const s = el("div", "sp", "✦"); s.style.cssText = `left:${Math.random() * 100}vw;top:${Math.random() * 100}vh;font-size:${8 + Math.random() * 14}px;animation-delay:${-Math.random() * 4}s;animation-duration:${2.5 + Math.random() * 3}s`; $("#fx").append(s);
 }
 
 /* Papillons et fleurs blanches flottantes (images) */
 if (!matchMedia("(prefers-reduced-motion:reduce)").matches) {
   const fx = $("#fx");
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 15; i++) {
     const b = el("div", "bf"); b.innerHTML = '<img src="assets/papillon.webp" alt="">';
-    b.style.cssText = `left:${10 + Math.random() * 80}vw;top:${40 + Math.random() * 50}vh;width:${28 + Math.random() * 20}px;animation-duration:${14 + Math.random() * 12}s;animation-delay:${-Math.random() * 14}s`; fx.append(b);
+    b.style.cssText = `left:${10 + Math.random() * 80}vw;top:${40 + Math.random() * 50}vh;width:${4 + Math.random() * 10}px;animation-duration:${14 + Math.random() * 12}s;animation-delay:${-Math.random() * 14}s`; fx.append(b);
   }
   for (let i = 0; i < 9; i++) {
     const p = el("div", "pt"); p.innerHTML = '<img src="assets/fleur-blanche.webp" alt="">';
-    p.style.cssText = `left:${Math.random() * 100}vw;width:${18 + Math.random() * 20}px;animation-duration:${11 + Math.random() * 10}s;animation-delay:${-Math.random() * 14}s`; fx.append(p);
+    p.style.cssText = `left:${Math.random() * 100}vw;width:${10 + Math.random() * 10}px;animation-duration:${11 + Math.random() * 10}s;animation-delay:${-Math.random() * 14}s`; fx.append(p);
   }
 }
 
 /* Billet acrylique (dentelle transparente) + filigranes dorés de l'enveloppe */
-(function () {
-  const vine = (x0, y0, x1, y1) => {
-    const L = Math.hypot(x1 - x0, y1 - y0), n = Math.floor(L / 9), ux = (x1 - x0) / L, uy = (y1 - y0) / L; let p = "", lf = "";
-    for (let i = 0; i <= n; i++) {
-      const t = i * 9, w = 5 * Math.sin(i * .8), x = x0 + ux * t - uy * w, y = y0 + uy * t + ux * w; p += (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
-      if (i % 2 && i < n) { const s = i % 4 == 1 ? 1 : -1, cx = (x - uy * s * 7).toFixed(1), cy = (y + ux * s * 7).toFixed(1), a = (Math.atan2(uy, ux) * 180 / Math.PI + s * 55).toFixed(0);
-        lf += `<ellipse cx="${cx}" cy="${cy}" rx="8" ry="3.6" transform="rotate(${a} ${cx} ${cy})"/>`; }
-    }
-    return `<path d="${p}" fill="none"/>` + lf;
-  };
-  $(".lc").innerHTML = `<g stroke="#d4bf86" stroke-width="1.8" fill="rgba(255,255,255,.75)" stroke-linejoin="round" style="filter:drop-shadow(0 1px 2px rgba(120,90,30,.35))">` +
-    vine(30, 17, 270, 17) + vine(30, 383, 270, 383) + vine(17, 30, 17, 370) + vine(283, 30, 283, 370) +
-    [[20, 20], [280, 20], [20, 380], [280, 380]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="12"/><circle cx="${x}" cy="${y}" r="6"/>`).join("") + `</g>`;
-  const FIL = `<svg viewBox="0 0 200 80"><g fill="url(#gdg)" stroke="#7a5614" stroke-width=".6"><path d="M4 72C40 72 58 22 108 26S170 54 196 18" fill="none" stroke="url(#gdg)" stroke-width="3.2"/>` +
-    [[30, 66, -20], [52, 52, -55], [70, 34, -70], [96, 27, -10], [122, 32, 25], [148, 44, 35], [172, 40, -40]].map(([x, y, a]) => `<path transform="translate(${x} ${y}) rotate(${a})" d="M0 0C8-11 24-11 30 0C24 9 8 9 0 0Z"/>`).join("") +
-    `<circle cx="190" cy="16" r="6" fill="none" stroke="url(#gdg)" stroke-width="2.4"/><circle cx="12" cy="66" r="5" fill="none" stroke="url(#gdg)" stroke-width="2.2"/></g></svg>`;
-  [["flap", "ft1"], ["flap", "ft2"], ["pocket", "fb1"], ["pocket", "fb2"]].forEach(([p, c]) => { const d = el("i", "fil " + c); d.innerHTML = FIL; $("." + p).append(d); });
-})();
 
 /* Enveloppe d'introduction */
 const env = $("#env");

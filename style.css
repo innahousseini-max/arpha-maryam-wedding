@@ -41,7 +41,7 @@ h2.script{font-size:clamp(40px,10vw,60px);color:var(--gr)}
 .hint{margin-top:28px;font-style:italic;color:var(--rose);animation:pl 2s infinite}@keyframes pl{50%{opacity:.3}}
 /* countdown */
 .cd{display:flex;justify-content:center;gap:clamp(8px,3.5vw,24px)}
-.cd div{min-width:64px}.cd b{display:block;font:600 clamp(34px,10vw,54px)/1.1 Cinzel,serif;color:var(--rose)}.cd small{font-size:11px;color:var(--sv2)}
+.cd div{min-width:64px}.cd b{display:block;font:600 clamp(34px,10vw,54px)/1.1 Cinzel,serif;color:var(--rose)}.cd small{font-size:15px;color:var(--gold)}
 /* programme */
 .day{margin-top:26px}.day h3{margin:0;font:600 20px Cinzel,serif;letter-spacing:.1em;color:var(--rose);text-decoration:underline;text-underline-offset:6px}
 .ev{margin:12px 0 0;font-weight:600;color:var(--gr)}.ev span{display:block;color:#b08a8f;font-size:22px}.ev em{display:block;font-size:16px;color:var(--ink);font-weight:400}
@@ -64,16 +64,16 @@ input,textarea{width:100%;padding:13px 15px;border:1px solid var(--sv);border-ra
 .heart{width:min(78vw,300px);aspect-ratio:1;margin:30px auto 0;display:grid;place-content:center;gap:12px;background:radial-gradient(circle,#fffdf9,var(--bl));clip-path:path("M150 270C20 180 -10 90 50 40c40-30 80-10 100 25 20-35 60-55 100-25 60 50 30 140-100 230z");filter:drop-shadow(0 10px 20px rgba(0,0,0,.2))}
 .heart h3{font-size:34px;margin:0;color:var(--gr)}footer{padding:30px 0 120px;font:13px Cinzel,serif;letter-spacing:.15em;color:var(--sv2)}
 /* disc */
-#disc{position:fixed;left:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:80;background:none;border:0;cursor:pointer;display:grid;justify-items:center;gap:4px;padding:0}
+#disc{position:fixed;left:12px;top:calc(14px + env(safe-area-inset-bottom,0px));z-index:80;background:none;border:0;cursor:pointer;display:grid;justify-items:center;gap:4px;padding:0}
 .vinyl{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(#111 0 2px,#262626 3px 4px);box-shadow:0 6px 16px rgba(0,0,0,.4);position:relative}
 .vinyl::after{content:"";position:absolute;inset:22px;border-radius:50%;background:var(--bl2)}.vinyl i{position:relative;z-index:2;font-style:normal;color:#fff;font-size:14px}
 #disc.on .vinyl{animation:sp 4s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}#disc small{font-size:9px;color:var(--gr);background:#fffdf9cc;padding:1px 6px;border-radius:8px}
 /* flora + fx */
-[data-flora]{position:absolute;width:min(46vw,240px);aspect-ratio:1;pointer-events:none;z-index:1}
-.panel [data-flora],.thanks [data-flora]{width:130px}
+[data-flora]{position:absolute;width:min(46vw,250px);aspect-ratio:1;pointer-events:none;z-index:1}
+.panel [data-flora],.thanks [data-flora]{width:200px}
 [data-flora=tl]{top:-30px;left:-14px}[data-flora=tr]{top:-30px;right:-14px;transform:scaleX(-1)}[data-flora=bl]{bottom:-34px;left:-14px;transform:scaleY(-1)}[data-flora=br]{bottom:0;right:-14px;transform:scale(-1)}
 [data-flora] svg{width:100%;height:100%;animation:sway 6s ease-in-out infinite;transform-origin:0 100%}@keyframes sway{50%{transform:rotate(2.5deg)}}
-.bf{position:fixed;z-index:60;pointer-events:none;width:30px;animation:fly linear infinite}
+.bf{position:fixed;z-index:60;pointer-events:none;width:10px;animation:fly linear infinite}
 .bf .wl,.bf .wr{animation:fl .45s ease-in-out infinite alternate;transform-origin:20px 15px}.bf .wr{animation-name:fr}
 @keyframes fl{to{transform:scaleX(.25)}}@keyframes fr{to{transform:scaleX(.25)}}
 @keyframes fly{0%{transform:translate(0,0)}25%{transform:translate(60px,-80px)}50%{transform:translate(-30px,-160px)}75%{transform:translate(50px,-240px)}100%{transform:translate(0,-320px)}}
@@ -145,8 +145,8 @@ body,#intro{background:#f4eee4 url(assets/bg.webp) center top/460px auto}
 .fb1{left:4%;bottom:6%;width:30%;transform:rotate(-22deg)}.fb2{right:4%;bottom:6%;width:30%;transform:scaleX(-1) rotate(-22deg)}
 .seal{top:62%;display:grid;width:94px!important;height:94px;margin:-47px 0 0 -47px;background:radial-gradient(circle at 35% 30%,#fff3bd,#dcb445 45%,#8d6718);box-shadow:inset 0 0 0 5px rgba(255,236,160,.55),inset 0 0 0 7px rgba(120,84,14,.35),0 8px 16px rgba(0,0,0,.45);color:#7a5412;font:400 44px "Great Vibes",cursive;text-shadow:0 1px 0 #ffeaa6,0 -1px 0 rgba(90,60,8,.5)}
 .seal em{margin-left:-10px}
-.env>.e1{left:-11%;bottom:-14%;width:46%;height:auto;aspect-ratio:1.2;background:url(assets/rose2.webp) center/contain no-repeat;transform:none;-webkit-mask-image:none;mask-image:none}
-.env>.e2{right:-14%;top:-22%;width:34%;height:auto;aspect-ratio:.62;background:url(assets/rose3.webp) top/cover no-repeat;transform:scaleX(-1)}
+.env>.e1{left:-11%;top:-22%;width:34%;height:auto;aspect-ratio:1.2;background:url(assets/fleur.webp) top/contain no-repeat;transform:none;-webkit-mask-image:none;mask-image:none}
+.env>.e2{right:-14%;top:-22%;width:34%;height:auto;aspect-ratio:.62;background:url(assets/fleur.webp) top/cover no-repeat;transform:scaleX(-1)}
 /* billet acrylique */
 .card{width:72%!important;left:14%!important;top:10px;height:auto!important;aspect-ratio:3/4;display:block;background:rgba(255,255,255,.22);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);border:0;outline:0;border-radius:14px}
 .env.open .card{transform:translateY(-58%)}
@@ -158,12 +158,12 @@ body,#intro{background:#f4eee4 url(assets/bg.webp) center top/460px auto}
 .dt span{margin:0;color:#e8cf8c;font:600 12px Cinzel,serif;letter-spacing:.2em}
 .dt em{font:600 34px "Cormorant Garamond",serif;padding:0 12px;border-left:1px solid #e8cf8c;border-right:1px solid #e8cf8c}
 /* disque plus grand + roses */
-#disc{left:16px;bottom:calc(20px + env(safe-area-inset-bottom,0px))}
-.vinyl{width:88px;height:88px}.vinyl::after{inset:30px;background:radial-gradient(circle at 35% 30%,#f6e2a0,#c9a13e)}.vinyl i{font-size:19px}
-#disc small{font-size:11px;padding:2px 9px}
+#disc{left:10px;top:calc(20px + env(safe-area-inset-bottom,0px))}
+.vinyl{width:50px;height:50px}.vinyl::after{inset:15px;background:radial-gradient(circle at 30% 25%,#f6e2a0,#c9a13e)}.vinyl i{font-size:19px}
+#disc small{font-size:11px;padding:1px 9px}
 #disc::before,#disc::after{content:"";position:absolute;background:url(assets/rose2.webp) center/contain no-repeat;filter:drop-shadow(0 3px 4px rgba(0,0,0,.3));pointer-events:none;z-index:3}
-#disc::before{width:58px;height:50px;left:-20px;top:-16px}
-#disc::after{width:50px;height:44px;right:-18px;top:34px;transform:scaleX(-1) rotate(20deg)}
+#disc::before{width:35px;height:50px;right:-15px;top:-5px}
+#disc::after{width:40px;height:44px;left:-20px;top:-5px;transform:scaleX(-1) rotate(20deg)}
 /* corrections */
 .gd{-webkit-background-clip:text;background-clip:text;color:transparent;background-size:220% 100%;animation:sh 7s linear infinite}
 .tag{color:#9a7424}
@@ -206,10 +206,26 @@ background:var(--g) 18% 0/21% 1px,var(--g) 82% 0/21% 1px,var(--g) 18% 100%/21% 1
 .seal img{width:84%;filter:brightness(.42) sepia(.6) saturate(2) drop-shadow(0 1px 0 rgba(255,240,170,.9))}
 /* billet ivoire, écritures bordeaux */
 .card{background:linear-gradient(160deg,#fffaf0,#f2e8d3);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.inner{background:linear-gradient(#fffdf7,#f7efdf);box-shadow:inset 0 0 0 1px #d9c692,inset 0 0 0 5px #fffdf7,inset 0 0 0 6px #e3d3a2}
+.inner{background:linear-gradient(#fffdf7,#f7efdf);box-shadow:inset 10 0 0 1px #d9c692,inset 0 0 0 10px #fffdf7,inset 0 0 0 6px #e3d3a2}
 .inner small{color:var(--rose)}.inner i{color:var(--rose)}
-.inner b{font:400 46px/1 "Great Vibes",cursive;color:var(--rose);background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:var(--rose);animation:none}
+.inner b{font:300 46px/1 "Great Vibes",cursive;color:var(--rose);background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:var(--rose);animation:none}
 .dt,.dt span{color:var(--rose)}.dt em{color:var(--rose);border-color:var(--rose)}
 /* corrections v4 */
 .card .inner b.gd{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:var(--rose)!important;-webkit-text-fill-color:var(--rose)!important;animation:none!important}
 #hero .sv{background-image:linear-gradient(100deg,#9a7418,#c9a227 35%,#a8820f 55%,#d4b13a 75%,#9a7418)}
+
+.lc {
+  width: 100%;
+  max-width: 800px; /* À ajuster selon vos besoins */
+  height: 500px;
+  
+  /* On définit une épaisseur de bordure qui accueillera la dentelle */
+  border: 125px solid transparent; 
+  
+  /* On applique l'image de dentelle et on la découpe (slice) pour qu'elle s'étire proprement */
+  border-image-source: url(assets/cadre-dentelle.png);
+  border-image-slice: 120; /* Ajustez cette valeur selon la taille de votre image pour éviter les déformations */
+  border-image-repeat: round; /* Répète le motif harmonieusement sans le couper */
+  
+  background-color: #fcfbf7; /* Teinte crème pour l'intérieur du cadre */
+}
